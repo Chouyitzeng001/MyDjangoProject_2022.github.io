@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <!-- {% load static %} -->
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
+    <!-- <link rel="stylesheet" href="static\css\style.css"> -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@700&display=swap" rel="stylesheet">
+    <title>Food Articles</title>
+    <link rel="shortcut icon" href="#">
+
+    <style>
+      
+*{
+    font-family: 'Cardo', serif;
+}
+
+#intro {
+	background-image: url(/static/images/12345.webp);
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 70%;
+    height: 100VH;
+    margin-bottom: 0px;
+    position: relative;
+    overflow: scroll;
+}
+
+#intro .container{
+    background-color:#FFF8EA;
+    opacity: 0.9;  
+    border-radius: 1em;
+    position: relative; 
+    top:10px
+}
+
+.container .hold{
+    border-radius: 2em;
+    align-items: center;
+}
+
+h1{
+  color: rgb(248, 238, 238);
+}
+
+
+    </style>
+  </head>
+  <body>
+    <section id="intro">
+      <div class="container p-5 mt-5 text-dark text-center ">
+        <div class="container" style="background-color:#3C4048;">
+          <div class="col-md-12">
+            <h1 class="display-3">-----食記-----</h1>
+          </div>
+        </div>
+        <div class="container mt-5 text-center text-dark">
+        {% block content %}
+           {% endblock %}
+          </div>
+    </div>
+  </section>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>

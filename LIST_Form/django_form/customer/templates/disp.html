@@ -1,0 +1,103 @@
+<!-- disp.html -->
+<!DOCTYPE html>
+    <html>
+    <head>
+    <meta charset='utf-8'>
+    <link href="https://fonts.googleapis.com/css?family=Cardo" rel="stylesheet">
+    <title>{{p.name}}</title>
+    <style>
+        
+        *{
+            font-family: sans-serif;
+            margin:0;
+            padding:0;
+        }
+
+      
+        table{
+            border-collapse: collapse;
+            width: 80%;
+            align-items: center;
+            margin-left: 50px;
+        }
+        th,td{
+            border-bottom: 2px solid rgb(0, 0, 0); 
+        }
+
+        td{
+            text-align: left;
+            height: 50px;
+            width: 30px;
+            font-size: larger;
+        }
+        tr:hover{
+            background-color: rgb(178, 178, 178);
+            color: black;
+        }
+
+        .list{
+            padding: 20px;
+            text-align: center;
+        }
+
+        a{  
+            padding: 10px;
+            box-sizing: border-box;
+            background: rgba(8, 7, 5, 0.5);
+            border-radius: 50%;
+            text-decoration: none;
+            text-align: center;
+            font-size: 16px;
+            color: aliceblue;
+        }
+        .list a:hover{
+            background-color: rgb(149, 147, 147);
+            color: black;
+            font-size: 16px;  
+            border: 2px solid black;  
+        }
+        section{
+            height: 100vh;
+            align-items: center;
+            background: linear-gradient(-30deg,#fafdff,#3E6D9C);
+            padding-top: 100px;
+        
+        }
+        .block{
+            width: 500px;
+            /* background-color: rgb(89, 128, 200); */
+            background: linear-gradient(-30deg,#81C6E8,rgb(239, 239, 243));
+            border-radius: 2em;
+            opacity: 0.7;
+            margin: auto;
+            padding-top: 30px;
+            box-shadow: 3px 5px 10px 0px black;
+        }
+        .text{
+            text-align: center;
+            padding-bottom: 10px;
+        }
+    </style>
+    </head>
+    <body>
+    <section>
+    <div class="block">
+    <div class="text">
+    <h2>會員 : {{p.name}}</h2>
+        </div>
+    <hr>
+    <div class="tabl">
+    <table>
+    <tr><td>品項編號:</td><td>{{p.sku}}號</td></tr>
+    <tr><td>會員姓名:</td><td>{{p.name}}</td></tr>
+    <tr><td>購買金額:</td><td>{{p.price}}元</td></tr>
+    <tr><td>訂購數量:</td><td>{{p.qty}}個</td></tr>
+    </table>
+        </div>
+    <div class="list">
+    <a href='/list'>回列表</a>
+            </div>
+        </div>
+    </section>
+    </body>
+    </html>

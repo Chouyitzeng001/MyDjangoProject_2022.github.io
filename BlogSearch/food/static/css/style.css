@@ -1,0 +1,30 @@
+
+*{
+    font-family: 'Cardo', serif;
+}
+
+#intro {
+	background-image: url(/static/images/12.jpeg);
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 70%;
+    height: 100VH;
+    margin-bottom: 0px;
+    position: relative;
+    overflow: scroll;
+}
+
+#intro .container{
+    background-color: darkgray;
+    opacity: 0.7;  
+    border-radius: 1em;
+    position: relative; 
+    top:10px
+}
+
+.container .hold{
+    border-radius: 2em;
+    align-items: center;
+}
+
+

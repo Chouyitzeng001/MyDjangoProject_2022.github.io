@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load  static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTT</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <section class="setcss">
+        <div class="setone">
+        <div class="formm">
+        <p >要爬取的網頁是 PTT 八卦版</p>
+
+        <form action="/crawler/POST_crawl/"method="post" class="form">{% csrf_token %}
+        <input type="text" name="title" class="inputkeyin" placeholder="查詢的資料"> <br>
+
+        <form action="/crawler/POST_crawl/"method="post" class="form">{% csrf_token %}
+        <input type="password" name="APIkey" class="inputkeyin" placeholder="API key"> <br>
+
+        
+        <!-- {#{simple_crawl.html （這是爬蟲抓完之後 會顯示的網頁）}#} -->
+        <input type="submit"value="送出" class="inputkeyout">
+    </div>
+    </div>
+    </section>
+</body>
+</html>

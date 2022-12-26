@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load  static %}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="{% static 'css/table.css' %}"> 
+  {% comment %} <link rel="stylesheet" href="/crawler/static/css/table.css"> {% endcomment %}
+  <title>爬蟲</title>
+</head>
+
+<body>
+  <section>
+    <h1>您爬取的結果如下：共{{articlenumber}}篇文章</h1>
+    <!-- <p> {{country_to_count}} </p>
+    <p> {{author}} </p>
+    <p> {{title}} </p>
+    <p> {{iptotal}} </p>
+    <p> {{countryT}} </p> -->
+    <!-- <h2>已輸出檔案「產生的文件檔案.csv」</h2> -->
+    <div class='tool'>
+    <table>
+      <th class='one'>作者</th>
+      {% for autho in author %}
+      <tr>
+          <td>{{autho}}</td>
+      </tr>
+      {% endfor %}
+      </table>
+      
+      <table >
+          <th class='two'>標題</th>
+          {% for titl in title %}
+          <tr>
+              <td>{{titl}}</td>
+          </tr>
+          {% endfor %}
+          </table>
+      
+      
+      
+      <table>
+          <th class='three'>IP</th>
+          {% for iptotl in iptotal %}
+          <tr>
+              <td>{{iptotl}}</td>
+          </tr>
+          {% endfor %}
+          </table>
+      
+      
+      <table >
+          <th class='four'>國家</th>
+          {% for country in countryT %}
+          <tr>
+              <td>{{country}}</td>
+          </tr>
+          {% endfor %}
+          </table>
+        </div>
+  </section>
+
+</body>
+
+</html>

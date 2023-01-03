@@ -22,6 +22,5 @@
 <div align="center">
 <img width="600" height="300" src="./LIST_Form.png">
 <img width="600" height="300" src="./List.png">
-<img width="600" height="300" src="./Crawl.png"> 
 <div> <strong>學習使用Django建立表單,admin建置內容新增與刪除.</strong> </div>
 </div>
